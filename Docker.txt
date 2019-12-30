@@ -1,0 +1,22 @@
+sudo apt get update
+sudo apt-get install docker-ce-cli conainerd.io
+	to install using specific version
+apt-cache nadison docker-ce
+sudo docker run hello-world
+
+	commands:
+docker --version
+docker pull <image-name>
+docker run -it -d <image-name>
+docker ps
+docker ps -a
+docker exec -it <conrainer is> bash
+docker stop <container id>
+docker kill <cotaineer id>
+docker commit <container is> <username | imAGENAME>
+docker login
+docker push <username | imagename>
+docker images
+docker rm <container id>
+docker rmi <image id>
+docker build <path to docker file>

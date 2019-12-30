@@ -1,0 +1,44 @@
+public object [][] storeData()
+{
+return new Object[][]
+{
+{"admin12","admin123"}
+{"pratik","pratik123"}
+};
+}
+
+@parameters({"config"})
+@Test
+public void openBrowser(String key) throws InteruuptException{
+sstem.setProperty("key","path");
+chrome =new ChromeDriver();
+chrome.get("http://www.newtours.demout.com/");
+}
+
+@Test(priority=1,dataProvider="dp")
+public void loginTest(Strng un,String pwd) thros exception
+{
+Thread.sleep(4000);
+
+chrome.findElement(By.name("userName")).sendKeys(un);
+chrome.findElement(By.name("passWord")).sendKeys(pwd);
+chrome.findElement(By.name("login")).click();
+
+chrome.findElement(By.xpath("html/body/div/table/tbody/tr/td[2]/table/tbody/tr[2]/td/table/tbody...")).click();
+}
+
+@AfterTest
+public void closeBrowser()
+{
+	chrome.close();
+}
+
+
+in xml file
+<suite name=""Suite" parallel="false">
+<test name="Test">
+<parameter name="config" value="webdriver.chrome">...
+<class name="com.training.beans.NewTest"/>
+</classes>
+</test>
+</suite>
